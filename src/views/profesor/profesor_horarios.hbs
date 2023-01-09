@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+           <div class="col-md-4">
+            
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>hora</th>
+                            <th>dia</th>
+                            <th>materia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each HorariosProfesor}}
+                        <tr>
+                            <td>{{hora}}</td>
+                            <td>{{dia}}</td>
+                            <td>{{nombre_materia}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+           </div>
+    </div>
+    
+</div>

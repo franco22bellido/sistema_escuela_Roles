@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+   {{{body}}}
+   
+    {{#if success}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="alert alert-succes">
+                    {{success}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+        {{#if message}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="alert alert-succes">
+                    {{message}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+   <!-- JavaScript Bundle with Popper -->
+<script src="/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

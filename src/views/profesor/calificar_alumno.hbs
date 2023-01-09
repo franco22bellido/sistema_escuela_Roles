@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Calificar</h3>
+            <form action="/calificaralumno" method="post" class="form">
+                <label for="">usuario</label>
+                <input type="text" class="form-control" name="user">
+                <label for="">trimestre</label>
+                <input type="text" class="form-control" name="trimestre">
+                <label for="">calificacion</label>
+                <input type="text" class="form-control" name="calificacion">
+                <label for="">materia</label>
+                <input type="text" class="form-control" name="materia">
+                <button class="btn btn-success">Calificar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-3">
+            <h3>Mis alumnos</h3>
+            <table class="table table-dark table-striped" >
+                <thead>
+                    <tr>
+                        <th>usuario</th>
+                        <th>nombre materia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {{#each mis_alumnos}}
+                    <tr>
+                            <td>{{user}}</td>
+                            <td>{{nombre_materia}}</td>
+                    </tr>
+                        {{/each}}
+                </tbody>
+            </table>
+            {{#each findMaterias}}
+            <a href="/calificaralumno/{{id}}" class="btn btn-success">ver {{nombre_materia}}</a> 
+            {{/each}}
+            <h3>Alumnos calificados</h3>
+            <table class="table table-dark table-striped mt-3" >
+                <thead>
+                    <tr>
+                        <th>usuario</th>
+                        <th>nombre materia</th>
+                        <th>calificacion</th>
+                        <th>trimestre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each calificacion_trimestre}}
+                    <tr>
+                        <td>{{user}}</td>
+                        <td>{{nombre_materia}}</td>
+                        <td>{{calificacion}}</td>
+                        <td>{{trimestre}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <a href="/calificaralumno/{{materia_id}}/1" class="btn btn-success">trimesetre 1</a>
+            <a href="/calificaralumno/{{materia_id}}/2" class="btn btn-success">trimesetre 2</a>
+            <a href="/calificaralumno/{{materia_id}}/3" class="btn btn-success">trimesetre 3</a>
+</div>
